@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PhishGuard — Comprehensive cybersecurity awareness training on phishing attacks, fraudulent emails, fake websites, social engineering, and an interactive quiz.">
+  <meta name="keywords" content="phishing awareness, cybersecurity training, fake websites, email phishing, smishing, social engineering, cyber defense, interactive quiz">
+  <meta name="author" content="PhishGuard Cyber Defense Academy">
+  <title>PhishGuard — Phishing Awareness Training</title>
+
+  <!-- Google Fonts for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/shield-check.svg">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div id="readingProgressBar" class="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo" aria-label="PhishGuard Home">
+        <div class="logo-icon-wrap">
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Phish<span class="highlight-purple">Guard</span></span>
+          <span class="logo-subtitle">Cyber Defense Academy</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#learn" class="nav-link">Learn</a></li>
+          <li><a href="#fake-sites" class="nav-link">Fake Sites</a></li>
+          <li><a href="#social-eng" class="nav-link">Social Engineering</a></li>
+          <li><a href="#examples" class="nav-link">Examples</a></li>
+          <li><a href="#stay-safe" class="nav-link">Stay Safe</a></li>
+          <li><a href="#quiz" class="nav-link">Quiz</a></li>
+          <li><a href="#checklist" class="nav-link">Safety Checklist</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <a href="#quiz" class="btn btn-nav-cta" id="headerQuizBtn">
+          <span>Take Quiz</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#learn" class="mobile-nav-link">Learn About Phishing</a></li>
+        <li><a href="#fake-sites" class="mobile-nav-link">Fake Website Detection</a></li>
+        <li><a href="#social-eng" class="mobile-nav-link">Social Engineering</a></li>
+        <li><a href="#examples" class="mobile-nav-link">Realistic Examples</a></li>
+        <li><a href="#stay-safe" class="mobile-nav-link">Security Best Practices</a></li>
+        <li><a href="#quiz" class="mobile-nav-link">Interactive Quiz</a></li>
+        <li><a href="#checklist" class="mobile-nav-link">Final Safety Checklist</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="#quiz" class="btn btn-primary btn-block mobile-quiz-btn">Start 10-Question Quiz</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- HERO SECTION (HOME) -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="pulse-indicator"></span>
+            <span class="badge-text">Interactive Cybersecurity Awareness Training</span>
+          </div>
+
+          <h1 class="hero-title">
+            PhishGuard — <span class="gradient-text">Phishing Awareness</span> Training
+          </h1>
+
+          <p class="hero-headline">
+            <span class="quote-accent">“</span>Pause. Check. Stay Protected.<span class="quote-accent">”</span>
+          </p>
+
+          <p class="hero-description">
+            Over 3.4 billion deceptive emails are dispatched across the globe every single day. Attackers use urgency, psychological manipulation, and spoofed domains to breach accounts. PhishGuard equips you with the instinct and analytical tools to spot, dissect, and neutralize phishing attempts before damage occurs.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#learn" class="btn btn-primary btn-glow" id="heroStartLearningBtn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+              <span>Start Learning</span>
+            </a>
+            <a href="#quiz" class="btn btn-secondary" id="heroTakeQuizBtn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="7"/>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+              </svg>
+              <span>Take the Quiz</span>
+            </a>
+          </div>
+
+          <!-- Quick Threat Metric Highlights -->
+          <div class="hero-stats-grid">
+            <div class="stat-card">
+              <div class="stat-value">3.4B+</div>
+              <div class="stat-label">Daily Malicious Emails Dispatched</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">82%</div>
+              <div class="stat-label">Breaches Involve Human Manipulation</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">1 Click</div>
+              <div class="stat-label">Is All Attackers Need to Compromise</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">90%</div>
+              <div class="stat-label">Risk Reduction with Defensive Habits</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <img src="assets/images/hero-illustration.svg" alt="Cybersecurity shield defending against phishing attacks" class="hero-img" width="550" height="460">
+            <div class="hero-floating-tip">
+              <div class="tip-icon-dot"></div>
+              <div>
+                <strong>Golden Rule:</strong> Never authenticate or provide MFA codes from unsolicited messages.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: LEARN ABOUT PHISHING -->
+    <section class="content-section" id="learn">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Cyber Defense Fundamentals</span>
+          <h2 class="section-title">Learn About Phishing Attacks</h2>
+          <p class="section-subtitle">
+            Understand how digital adversaries craft deceitful lures, manipulate psychology, and impersonate legitimate institutions.
+          </p>
+        </div>
+
+        <!-- What is Phishing Overview Card -->
+        <div class="concept-banner-card">
+          <div class="concept-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-banner-icon">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="concept-text">
+            <h3>What is Phishing and How Does it Work?</h3>
+            <p>
+              <strong>Phishing</strong> is a type of social engineering attack where an adversary poses as a trustworthy entity—such as your financial institution, workplace IT administrator, cloud provider, or shipping courier—to deceive you into disclosing confidential information (credentials, credit cards, MFA codes) or downloading harmful software.
+            </p>
+            <div class="attack-steps-flow">
+              <div class="flow-step">
+                <span class="step-num">1</span>
+                <div>
+                  <strong>Reconnaissance</strong>
+                  <p>Adversaries identify targets and study company branding, logos, and communication styles.</p>
+                </div>
+              </div>
+              <div class="flow-step">
+                <span class="step-num">2</span>
+                <div>
+                  <strong>Bait Crafting</strong>
+                  <p>A message is engineered with emotional triggers: panic, urgent deadlines, or lucrative rewards.</p>
+                </div>
+              </div>
+              <div class="flow-step">
+                <span class="step-num">3</span>
+                <div>
+                  <strong>Delivery</strong>
+                  <p>Messages arrive via Email, SMS text (Smishing), Phone call (Vishing), or Social Media messaging.</p>
+                </div>
+              </div>
+              <div class="flow-step">
+                <span class="step-num">4</span>
+                <div>
+                  <strong>Harvest & Exploit</strong>
+                  <p>Victim enters credentials onto a spoofed portal or opens a malicious attachment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Types of Phishing Grid -->
+        <div class="types-grid-heading">
+          <h3>The Common Variants of Phishing Attacks</h3>
+          <p>Phishing isn't just spam emails. Attackers diversify their vectors across multiple channels:</p>
+        </div>
+
+        <div class="cards-grid grid-3">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="card-icon-header">
+              <div class="icon-circle purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <span class="type-badge">Primary Threat</span>
+            </div>
+            <h4>Email Phishing (Bulk Phishing)</h4>
+            <p>
+              Mass emails sent indiscriminately to thousands of recipients mimicking trusted organizations like Google, Microsoft, Netflix, or FedEx. They rely on sheer volume and probability to hook victims into clicking fraudulent password reset links.
+            </p>
+            <div class="card-example-tag">Common Lure: "Your invoice is ready for download"</div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="card-icon-header">
+              <div class="icon-circle blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>
+              </div>
+              <span class="type-badge">Targeted</span>
+            </div>
+            <h4>Spear Phishing & Whaling</h4>
+            <p>
+              Carefully researched attacks targeted at a specific individual, department, or high-level executive (Whaling). Attackers utilize your real name, job role, and project names scraped from LinkedIn to make communications appear convincingly authentic.
+            </p>
+            <div class="card-example-tag">Common Lure: "Urgent project review requested by VP"</div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="card-icon-header">
+              <div class="icon-circle amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              </div>
+              <span class="type-badge">Mobile Threat</span>
+            </div>
+            <h4>Smishing (SMS Phishing)</h4>
+            <p>
+              Phishing messages delivered via SMS text messages. Attackers send fake delivery notifications, missed parcel warnings, or bank transaction alerts containing truncated short links that lead directly to mobile-optimized phishing sites.
+            </p>
+            <div class="card-example-tag">Common Lure: "Postal courier: Address incomplete, click link"</div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="card-icon-header">
+              <div class="icon-circle red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <span class="type-badge">Voice / Audio</span>
+            </div>
+            <h4>Vishing (Voice Call Phishing)</h4>
+            <p>
+              Attackers phone victims pretending to be technical support, fraud prevention investigators, or government tax officers. Modern vishing even employs AI voice cloning of managers or family members to coerce instant wire transfers.
+            </p>
+            <div class="card-example-tag">Common Lure: "Fraud alert: Confirm your verification code now"</div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feature-card">
+            <div class="card-icon-header">
+              <div class="icon-circle green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/></svg>
+              </div>
+              <span class="type-badge">Cloned Email</span>
+            </div>
+            <h4>Clone Phishing</h4>
+            <p>
+              Attackers intercept or duplicate a legitimate, previously delivered email containing an attachment or link. They replace the legitimate destination with a malicious replica while keeping the rest of the message identical.
+            </p>
+            <div class="card-example-tag">Common Lure: "Updated copy of yesterday's contract attached"</div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feature-card">
+            <div class="card-icon-header">
+              <div class="icon-circle purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              </div>
+              <span class="type-badge">Search Ads</span>
+            </div>
+            <h4>Search Engine Phishing (Malvertising)</h4>
+            <p>
+              Attackers purchase sponsored advertisements on major search engines for popular queries like "Bank Login" or "Download Free VPN". Unsuspecting searchers click the top sponsored ad which redirects to a fake mirror site.
+            </p>
+            <div class="card-example-tag">Common Lure: "Sponsored Top Result: Official Online Banking"</div>
+          </div>
+        </div>
+
+        <!-- How Impersonation Works & Warning Signs Dual Column -->
+        <div class="two-col-breakdown mt-5">
+          <div class="info-panel">
+            <div class="panel-header">
+              <span class="panel-icon warning">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </span>
+              <h3>How Attackers Impersonate Trusted Brands</h3>
+            </div>
+            <ul class="bullet-list">
+              <li>
+                <strong>Display Name Spoofing:</strong> The friendly name is set to "Microsoft Security", while the actual sender email address behind it is <code>admin@xyz8192-cloud.net</code>.
+              </li>
+              <li>
+                <strong>Lookalike Domains (Typosquatting):</strong> Using subtle character substitutions like <code>rnicrosoft.com</code> (r+n mimics m) or <code>paypa1.com</code> (number 1 replaces l).
+              </li>
+              <li>
+                <strong>Subdomain Obfuscation:</strong> Structuring URLs such as <code>chase.com.security-portal.me</code> where the actual hosting domain is <code>security-portal.me</code>, not Chase!
+              </li>
+              <li>
+                <strong>High-Fidelity Visual Clones:</strong> Stolen company logos, official color schemes, disclaimers, and legitimate privacy links embedded to manufacture trust.
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-panel">
+            <div class="panel-header">
+              <span class="panel-icon red-flag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+              </span>
+              <h3>Top Red Flags to Watch For</h3>
+            </div>
+            <ul class="bullet-list">
+              <li>
+                <strong>Artificial Urgency & Ultimatums:</strong> "Account suspended in 24 hours," "Immediate payment required," or "Legal action pending."
+              </li>
+              <li>
+                <strong>Impersonal or Generic Greetings:</strong> "Dear Valued Customer" or "Dear Member" instead of your registered personal name.
+              </li>
+              <li>
+                <strong>Mismatched Destination Links:</strong> The text displays <code>https://paypal.com</code>, but hovering over it reveals <code>http://secure-check-39.net</code>.
+              </li>
+              <li>
+                <strong>Unsolicited Attachments:</strong> File attachments ending in <code>.iso</code>, <code>.exe</code>, <code>.zip</code>, or macro-enabled documents asking you to "Enable Editing".
+              </li>
+              <li>
+                <strong>Requests for Sensitive Secrets:</strong> Official support teams will NEVER ask for your password, credit card CVV, or one-time SMS 2FA passcode!
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FAKE WEBSITE DETECTION & INTERACTIVE URL INSPECTOR -->
+    <section class="content-section bg-alt" id="fake-sites">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Digital Forensics</span>
+          <h2 class="section-title">Fake Website Detection</h2>
+          <p class="section-subtitle">
+            Master the art of URL dissection. Learn why a green lock icon doesn't guarantee safety and how to read domain names with surgical precision.
+          </p>
+        </div>
+
+        <!-- The Critical HTTPS Padlock Myth Alert Box -->
+        <div class="critical-alert-box" role="alert">
+          <div class="alert-icon-shield">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <div class="alert-content">
+            <div class="alert-heading">
+              <span class="alert-badge">Critical Truth</span>
+              <h4>HTTPS & The Padlock Icon Do NOT Mean a Website is Safe!</h4>
+            </div>
+            <p>
+              A common misconception is that if a website has <code>https://</code> and a lock icon in the browser address bar, it is legitimate. 
+              <strong>This is dangerously false.</strong> HTTPS only means the connection between your computer and that specific web server is encrypted. 
+              Over <strong>85% of modern phishing websites have valid HTTPS certificates</strong> because free SSL certificates (like Let's Encrypt) can be generated by anyone in seconds. 
+              An encrypted connection to an attacker's server just means your stolen credentials are transmitted securely to the criminal!
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive URL Inspector Widget -->
+        <div class="interactive-tool-card" id="urlInspectorTool">
+          <div class="tool-header">
+            <div class="tool-title-group">
+              <div class="tool-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div>
+                <h3>Interactive Tool: URL Anatomy Inspector</h3>
+                <p>Click preset links or type a URL below to dissect its structure and detect deception tactics.</p>
+              </div>
+            </div>
+            <div class="preset-buttons">
+              <span class="preset-label">Load Samples:</span>
+              <button class="btn btn-pill-sample" data-sample="scam-bank">Phishing Bank Link</button>
+              <button class="btn btn-pill-sample" data-sample="scam-subdomain">Subdomain Trick</button>
+              <button class="btn btn-pill-sample" data-sample="scam-typo">Typosquatted Brand</button>
+              <button class="btn btn-pill-sample" data-sample="safe-bank">Safe Official Domain</button>
+            </div>
+          </div>
+
+          <div class="tool-input-row">
+            <div class="input-prefix-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <input type="text" id="urlInspectInput" class="url-input" placeholder="Enter or paste a URL to analyze (e.g., https://paypal.com.verify-login.biz/auth)" value="https://chase-bank.security-verification-portal.com/login" aria-label="URL to inspect">
+            <button id="urlInspectBtn" class="btn btn-primary">Analyze URL</button>
+          </div>
+
+          <!-- URL Analysis Visualizer -->
+          <div class="url-dissection-board" id="urlDissectionBoard">
+            <div class="dissection-label">Structural Breakdown:</div>
+            <div class="url-token-stream" id="urlTokenStream">
+              <!-- Dynamically populated tokens -->
+            </div>
+
+            <!-- Verdict Card -->
+            <div class="analysis-verdict-card" id="analysisVerdictCard">
+              <div class="verdict-status-badge" id="verdictBadge">
+                <span id="verdictIcon">⚠️</span>
+                <span id="verdictTitle">High Phishing Risk Detected</span>
+              </div>
+              <p id="verdictReason" class="verdict-reason">
+                The actual domain being visited is <strong>security-verification-portal.com</strong>, NOT Chase Bank. Attackers prepended "chase-bank" as a misleading subdomain.
+              </p>
+              <div class="verdict-details-grid" id="verdictDetailsGrid">
+                <div class="verdict-detail-item">
+                  <span class="v-label">Registered Domain:</span>
+                  <span class="v-val text-danger" id="valDomain">security-verification-portal.com</span>
+                </div>
+                <div class="verdict-detail-item">
+                  <span class="v-label">Target Impersonated:</span>
+                  <span class="v-val" id="valTarget">Chase Bank</span>
+                </div>
+                <div class="verdict-detail-item">
+                  <span class="v-label">Protocol Status:</span>
+                  <span class="v-val" id="valProtocol">HTTPS (Encrypted, but destination is malicious)</span>
+                </div>
+                <div class="verdict-detail-item">
+                  <span class="v-label">Recommendation:</span>
+                  <span class="v-val text-warning" id="valAction">Do not click or enter credentials! Close page.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Pillars of Domain Detection Cards -->
+        <div class="cards-grid grid-4 mt-5">
+          <div class="technique-card">
+            <div class="tech-number">01</div>
+            <h4>Typosquatting & Lookalikes</h4>
+            <p>
+              Attackers register domains with deliberate typos: <code>g00gle.com</code>, <code>netflixx-billing.com</code>, or <code>amaz0n-orders.com</code>. Always scan letter-by-letter.
+            </p>
+          </div>
+
+          <div class="technique-card">
+            <div class="tech-number">02</div>
+            <h4>Subdomain Masquerading</h4>
+            <p>
+              In <code>apple.com.secure-id.org</code>, the domain owner is <strong>secure-id.org</strong>. Everything preceding the last two dot segments is just a customizable subdomain.
+            </p>
+          </div>
+
+          <div class="technique-card">
+            <div class="tech-number">03</div>
+            <h4>Suspicious Top-Level Domains</h4>
+            <p>
+              Be extraordinarily cautious of domains ending in obscure or heavily abused TLDs such as <code>.xyz</code>, <code>.top</code>, <code>.cam</code>, <code>.tk</code>, or <code>.live</code> for banking.
+            </p>
+          </div>
+
+          <div class="technique-card">
+            <div class="tech-number">04</div>
+            <h4>Deceptive Login Prompts</h4>
+            <p>
+              Fake pages immediately prompt for full social security numbers, PINs, mother's maiden name, or instant 6-digit phone SMS codes on a single form.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SOCIAL ENGINEERING AWARENESS -->
+    <section class="content-section" id="social-eng">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Human Psychology & Deception</span>
+          <h2 class="section-title">Social Engineering Awareness</h2>
+          <p class="section-subtitle">
+            Attackers don't hack systems; they hack human nature. Explore the psychological manipulation tactics exploited by cyber criminals.
+          </p>
+        </div>
+
+        <div class="cards-grid grid-2">
+          <!-- Tactic 1 -->
+          <div class="social-card">
+            <div class="social-header">
+              <div class="psych-icon panic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+              </div>
+              <div>
+                <h3>1. Artificial Urgency & Fear</h3>
+                <span class="psych-trigger">Trigger: Amygdala Panic Response</span>
+              </div>
+            </div>
+            <p class="psych-desc">
+              Criminals engineer high-stress scenarios demanding immediate action within minutes or hours. By inducing panic, they disable your critical thinking and prompt hurried actions.
+            </p>
+            <div class="tactic-examples">
+              <div class="tactic-quote">
+                <strong>Attacker Script:</strong> “Your account has been flagged for money laundering! You must verify identity within 1 hour or your balance will be permanently seized.”
+              </div>
+              <div class="defense-counter">
+                <strong>Defensive Mindset:</strong> Legitimate institutions don't issue 60-minute account forfeiture ultimatums. Step away and verify through independent phone lines.
+              </div>
+            </div>
+          </div>
+
+          <!-- Tactic 2 -->
+          <div class="social-card">
+            <div class="social-header">
+              <div class="psych-icon prize">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+              </div>
+              <div>
+                <h3>2. Tempting Rewards & Greed</h3>
+                <span class="psych-trigger">Trigger: Dopamine Anticipation</span>
+              </div>
+            </div>
+            <p class="psych-desc">
+              Unsolicited windfalls, free gift cards, crypto giveaways, tax refund surpluses, or company bonus payments. Victims are asked to pay a "small shipping/processing fee" or verify credentials to claim their prize.
+            </p>
+            <div class="tactic-examples">
+              <div class="tactic-quote">
+                <strong>Attacker Script:</strong> “Congratulations! You were selected for a $1,000 Amazon shopping spree. Pay $2.95 processing fee to receive your voucher code.”
+              </div>
+              <div class="defense-counter">
+                <strong>Defensive Mindset:</strong> If an offer seems too good to be true, it is 100% a scam. You cannot win a lottery or draw you never entered.
+              </div>
+            </div>
+          </div>
+
+          <!-- Tactic 3 -->
+          <div class="social-card">
+            <div class="social-header">
+              <div class="psych-icon authority">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+              </div>
+              <div>
+                <h3>3. Authority Figure Impersonation</h3>
+                <span class="psych-trigger">Trigger: Obedience to Power</span>
+              </div>
+            </div>
+            <p class="psych-desc">
+              Impersonating figures of authority—such as your company's CEO, internal IT Director, HR executive, law enforcement, or the IRS/tax department. Employees fear insubordination or reprimand, leading them to bypass standard safety protocols.
+            </p>
+            <div class="tactic-examples">
+              <div class="tactic-quote">
+                <strong>Attacker Script:</strong> “I'm in a confidential board meeting. Need you to purchase 5 Apple gift cards for a client presentation immediately. Don't call me, just reply with codes.”
+              </div>
+              <div class="defense-counter">
+                <strong>Defensive Mindset:</strong> Authentic leadership will never ask staff to purchase gift cards or bypass established procurement procedures over informal email.
+              </div>
+            </div>
+          </div>
+
+          <!-- Tactic 4 -->
+          <div class="social-card">
+            <div class="social-header">
+              <div class="psych-icon auth-hijack">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div>
+                <h3>4. MFA / 2FA Code Interception (Proxy Phishing)</h3>
+                <span class="psych-trigger">Trigger: False Sense of Cooperation</span>
+              </div>
+            </div>
+            <p class="psych-desc">
+              Attackers trigger a real password reset on your actual account, which generates a genuine SMS code to your phone. The attacker then calls or messages you claiming to be "blocking fraudulent logins" and asks: "Read me the 6-digit code to stop the hackers."
+            </p>
+            <div class="tactic-examples">
+              <div class="tactic-quote">
+                <strong>Attacker Script:</strong> “We see an unauthorized login from Russia. To safeguard your account, we just sent a security code to your phone. Please read it to me to confirm you are the owner.”
+              </div>
+              <div class="defense-counter">
+                <strong>Defensive Mindset:</strong> The SMS text explicitly says “DO NOT SHARE THIS CODE WITH ANYONE”. Reading that code hands your account key directly to the adversary.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: REALISTIC TRAINING EXAMPLES (SIMULATED INBOX) -->
+    <section class="content-section bg-alt" id="examples">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Interactive Simulation</span>
+          <h2 class="section-title">Realistic Training Examples</h2>
+          <p class="section-subtitle">
+            Inspect fictional phishing emails and smishing text messages alongside a legitimate verified communication. Click on any flagged hotspot to understand why it is suspicious.
+          </p>
+        </div>
+
+        <!-- Simulation Interface Container -->
+        <div class="simulator-wrapper">
+          <!-- Simulator Sidebar Tabs -->
+          <div class="sim-sidebar">
+            <div class="sim-sidebar-title">Select Scenario</div>
+            <button class="sim-tab active" data-scenario="bank-email">
+              <div class="sim-tab-icon mail-phish">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div class="sim-tab-info">
+                <span class="tab-badge scam-badge">Phishing Email</span>
+                <strong>Bank Account Suspension</strong>
+                <small>Spoofed Financial Institution</small>
+              </div>
+            </button>
+
+            <button class="sim-tab" data-scenario="delivery-smish">
+              <div class="sim-tab-icon smish">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              </div>
+              <div class="sim-tab-info">
+                <span class="tab-badge scam-badge">Smishing SMS</span>
+                <strong>Postal Delivery Failure</strong>
+                <small>Fake Delivery Fee Lure</small>
+              </div>
+            </button>
+
+            <button class="sim-tab" data-scenario="it-spear">
+              <div class="sim-tab-icon spear">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+              </div>
+              <div class="sim-tab-info">
+                <span class="tab-badge scam-badge">Spear Phishing</span>
+                <strong>IT Helpdesk Password Reset</strong>
+                <small>Internal Corporate Impersonation</small>
+              </div>
+            </button>
+
+            <button class="sim-tab" data-scenario="legit-email">
+              <div class="sim-tab-icon legit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div class="sim-tab-info">
+                <span class="tab-badge safe-badge">Safe Legitimate Email</span>
+                <strong>PayPal Monthly Statement</strong>
+                <small>Genuine Organization Email</small>
+              </div>
+            </button>
+          </div>
+
+          <!-- Simulator Main Viewer -->
+          <div class="sim-display-pane" id="simDisplayPane">
+            <!-- Top Controls -->
+            <div class="sim-top-bar">
+              <div class="sim-status-indicator" id="simStatusIndicator">
+                <span class="threat-dot dangerous"></span>
+                <span class="threat-label" id="simThreatLabel">PHISHING ATTACK SIMULATION (FICTIONAL)</span>
+              </div>
+              <div class="sim-controls">
+                <button class="btn btn-sm btn-outline" id="toggleRedFlagsBtn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon-sm"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <span id="toggleRedFlagsText">Hide Explanations</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dynamic Scenario Viewer Mount Point -->
+            <div class="sim-body-content" id="simBodyContent">
+              <!-- Content injected by script.js -->
+            </div>
+
+            <!-- Explanation Banner -->
+            <div class="sim-explanation-footer" id="simExplanationFooter">
+              <!-- Injected details -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SECURITY BEST PRACTICES (STAY SAFE) -->
+    <section class="content-section" id="stay-safe">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Defensive Action Guide</span>
+          <h2 class="section-title">Security Best Practices</h2>
+          <p class="section-subtitle">
+            Actionable strategies and proactive countermeasures to protect your personal and organizational identity every day.
+          </p>
+        </div>
+
+        <div class="cards-grid grid-3">
+          <div class="rule-card">
+            <div class="rule-num">01</div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h4>Verify Sender & Registered Domain</h4>
+            <p>
+              Inspect the entire email address after the <code>@</code> symbol. Ignore the friendly display name. Check for typos, odd domain extensions, or mismatched company names.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-num">02</div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </div>
+            <h4>Avoid Unexpected Links & Attachments</h4>
+            <p>
+              Instead of clicking links in unexpected messages, open a browser manually and type the official URL or use trusted bookmarks and official mobile applications.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-num">03</div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h4>Enforce Multi-Factor Authentication</h4>
+            <p>
+              Enable MFA/2FA on all email, banking, social, and work accounts. Prefer hardware security keys (FIDO2/WebAuthn) or Authenticator apps over SMS codes whenever possible.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-num">04</div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5z"/></svg>
+            </div>
+            <h4>Use a Dedicated Password Manager</h4>
+            <p>
+              Password managers protect you against phishing by design: they will refuse to autofill your credentials on spoofed domains (e.g. <code>paypa1.com</code>) because the domain doesn't match!
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-num">05</div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h4>Never Share OTPs or Passwords</h4>
+            <p>
+              No bank representative, IT support analyst, or government official will ever ask you to read back your one-time SMS verification code or password over phone, email, or chat.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-num">06</div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <h4>Report Suspicious Messages Instantly</h4>
+            <p>
+              Use your email client's "Report Phishing" button. In corporate environments, forward the message immediately to your internal Security Operations or IT Helpdesk.
+            </p>
+          </div>
+        </div>
+
+        <!-- EMERGENCY CONTAINMENT PROTOCOL -->
+        <div class="emergency-box mt-5">
+          <div class="emergency-header">
+            <div class="emergency-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="svg-badge-icon"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>Emergency Containment Protocol</span>
+            </div>
+            <h3>What to Do If You Accidentally Clicked a Suspicious Link</h3>
+          </div>
+          <p class="emergency-intro">
+            Mistakes happen. Taking immediate, disciplined containment action can stop a minor mishap from becoming a catastrophic data breach:
+          </p>
+          <div class="emergency-steps-grid">
+            <div class="e-step">
+              <span class="e-step-digit">1</span>
+              <div>
+                <h5>Disconnect & Close</h5>
+                <p>Immediately close the webpage tab. If you downloaded an attachment, disconnect your device from Wi-Fi and Ethernet to isolate potential malware.</p>
+              </div>
+            </div>
+            <div class="e-step">
+              <span class="e-step-digit">2</span>
+              <div>
+                <h5>Change Passwords Immediately</h5>
+                <p>From a clean, known-safe device, reset the password of any compromised account. Choose "Log out of all existing sessions / devices".</p>
+              </div>
+            </div>
+            <div class="e-step">
+              <span class="e-step-digit">3</span>
+              <div>
+                <h5>Alert IT or Financial Institutions</h5>
+                <p>If banking or corporate credentials were entered, contact your financial fraud hotline or corporate IT security team right away so they can freeze cards or revoke tokens.</p>
+              </div>
+            </div>
+            <div class="e-step">
+              <span class="e-step-digit">4</span>
+              <div>
+                <h5>Scan Device for Malware</h5>
+                <p>Perform an offline full system scan using up-to-date antivirus / endpoint detection software to catch keyloggers or trojans.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: INTERACTIVE QUIZ -->
+    <section class="content-section bg-alt" id="quiz">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Knowledge Validation</span>
+          <h2 class="section-title">Interactive Phishing Awareness Quiz</h2>
+          <p class="section-subtitle">
+            Test your cybersecurity instincts with 10 scenario-based questions. Receive instant analytical feedback and earn your defense certificate.
+          </p>
+        </div>
+
+        <div class="quiz-card-container">
+          <!-- Quiz Header / Progress Tracking -->
+          <div class="quiz-meta-header" id="quizMetaHeader">
+            <div class="quiz-progress-text">
+              <span>Question <strong id="currentQuestionNum">1</strong> of <strong id="totalQuestionsNum">10</strong></span>
+              <span class="quiz-score-pill">Score: <strong id="liveScore">0</strong></span>
+            </div>
+            <div class="quiz-progress-track" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+              <div class="quiz-progress-fill" id="quizProgressFill" style="width: 10%;"></div>
+            </div>
+          </div>
+
+          <!-- Active Question Area -->
+          <div class="quiz-interactive-area" id="quizInteractiveArea">
+            <div class="quiz-category-tag" id="questionCategory">Category: Email Phishing Detection</div>
+            <h3 class="quiz-question-title" id="questionTitle">
+              You receive an email from "PayPal Security Team" warning that your account is suspended due to suspicious activity. What is the safest first step?
+            </h3>
+
+            <!-- 4 Options Container -->
+            <div class="quiz-options-grid" id="quizOptionsGrid">
+              <!-- Options rendered dynamically -->
+            </div>
+
+            <!-- Feedback Banner (Hidden by default, shown after choice) -->
+            <div class="quiz-feedback-card hidden" id="quizFeedbackCard" role="region" aria-live="polite">
+              <div class="feedback-status-header">
+                <span class="feedback-icon" id="feedbackIcon"></span>
+                <h4 id="feedbackTitle">Correct!</h4>
+              </div>
+              <p id="feedbackExplanation" class="feedback-text">
+                Explanation text goes here.
+              </p>
+              <div class="feedback-actions">
+                <button class="btn btn-primary" id="nextQuestionBtn">
+                  <span>Next Question</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon-sm"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quiz Completion Results Screen (Hidden initially) -->
+          <div class="quiz-results-card hidden" id="quizResultsCard">
+            <div class="results-badge-wrap">
+              <img src="assets/images/phishguard-badge.svg" alt="PhishGuard Security Badge" class="results-badge-img" width="130" height="130">
+            </div>
+            <h3 class="results-title" id="resultsTitle">Training Assessment Complete!</h3>
+            <p class="results-rank-label">Assigned Rank: <strong id="resultsRank" class="text-accent">Cyber Defense Sentinel</strong></p>
+
+            <div class="score-circle-display">
+              <div class="score-number-large" id="scorePercentage">90%</div>
+              <div class="score-subtext" id="scoreFraction">9 out of 10 Correct</div>
+            </div>
+
+            <p class="results-narrative" id="resultsNarrative">
+              Outstanding work! You demonstrated sharp cybersecurity instincts and the ability to spot spoofed domains, malicious lures, and psychological manipulation.
+            </p>
+
+            <!-- Personalized Certificate Generation Area -->
+            <div class="certificate-generator-box">
+              <h4>Generate Your Certificate of Completion</h4>
+              <div class="cert-input-row">
+                <input type="text" id="certNameInput" class="cert-input" placeholder="Enter your full name (e.g., Alex Johnson)" maxlength="40">
+                <button class="btn btn-primary" id="generateCertBtn">View Certificate</button>
+              </div>
+            </div>
+
+            <div class="results-actions">
+              <button class="btn btn-secondary" id="restartQuizBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon-sm"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                <span>Restart Quiz</span>
+              </button>
+              <a href="#checklist" class="btn btn-outline">
+                <span>Review Final Safety Checklist</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon-sm"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE MODAL -->
+        <div class="modal-backdrop hidden" id="certModalBackdrop">
+          <div class="cert-modal-card" role="dialog" aria-modal="true" aria-labelledby="certTitle">
+            <button class="cert-close-btn" id="closeCertBtn" aria-label="Close certificate">&times;</button>
+            <div class="certificate-frame" id="printableCertificate">
+              <div class="cert-border">
+                <div class="cert-inner">
+                  <div class="cert-header">
+                    <img src="assets/images/phishguard-badge.svg" alt="PhishGuard Shield" width="70" height="70">
+                    <h2>PhishGuard Cyber Defense Academy</h2>
+                    <span class="cert-subtitle">Certificate of Cybersecurity Awareness</span>
+                  </div>
+                  <div class="cert-body">
+                    <p class="cert-intro">This is proudly presented to</p>
+                    <h3 class="cert-recipient" id="certRecipientName">Cyber Defender</h3>
+                    <p class="cert-achievement">
+                      For successfully completing the comprehensive <strong>Phishing Awareness & Social Engineering Defense Training</strong> and demonstrating verified proficiency in detecting fraudulent emails, typosquatted domains, and deception techniques.
+                    </p>
+                  </div>
+                  <div class="cert-footer">
+                    <div class="cert-sig">
+                      <div class="sig-line"></div>
+                      <span>PhishGuard Security Director</span>
+                    </div>
+                    <div class="cert-date-box">
+                      <span id="certIssueDate">Date: October 2026</span>
+                      <span class="cert-valid-seal">VERIFIED SECURE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-cert-actions">
+              <button class="btn btn-primary" id="printCertBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon-sm"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+                <span>Print / Save Certificate</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FINAL SAFETY CHECKLIST -->
+    <section class="content-section" id="checklist">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Interactive Pre-Click Protocol</span>
+          <h2 class="section-title">Final Safety Checklist</h2>
+          <p class="section-subtitle">
+            Run through this quick verification checklist before clicking any link, opening an attachment, sharing private information, or submitting payments.
+          </p>
+        </div>
+
+        <div class="checklist-card">
+          <div class="checklist-top-status">
+            <div class="checklist-meter-group">
+              <div class="meter-text">
+                <span>Safety Readiness: <strong id="checklistPercent">0%</strong></span>
+                <span id="checklistStatusText" class="badge-neutral">Review Checklist Items</span>
+              </div>
+              <div class="checklist-progress-bar">
+                <div class="checklist-progress-fill" id="checklistProgressFill" style="width: 0%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-sm btn-outline" id="resetChecklistBtn">Reset All</button>
+          </div>
+
+          <div class="checklist-items-grid">
+            <label class="check-item" for="chk1">
+              <input type="checkbox" id="chk1" class="checklist-checkbox">
+              <div class="check-content">
+                <strong>1. Verified the Exact Sender Email Domain</strong>
+                <p>Checked beyond the display name. The domain after @ exactly matches the official institution domain (e.g. <code>@chase.com</code> not <code>@chase-support.net</code>).</p>
+              </div>
+            </label>
+
+            <label class="check-item" for="chk2">
+              <input type="checkbox" id="chk2" class="checklist-checkbox">
+              <div class="check-content">
+                <strong>2. Hovered Over Destination Links Before Clicking</strong>
+                <p>Inspected the actual destination URL preview in the browser's bottom status bar to confirm it matches the genuine domain.</p>
+              </div>
+            </label>
+
+            <label class="check-item" for="chk3">
+              <input type="checkbox" id="chk3" class="checklist-checkbox">
+              <div class="check-content">
+                <strong>3. Confirmed It Does Not Rely Only on HTTPS</strong>
+                <p>Acknowledged that an SSL padlock only encrypts transmission and does not prove the website's authenticity or owner intent.</p>
+              </div>
+            </label>
+
+            <label class="check-item" for="chk4">
+              <input type="checkbox" id="chk4" class="checklist-checkbox">
+              <div class="check-content">
+                <strong>4. Evaluated for Artificial Urgency & Fear Tactics</strong>
+                <p>Recognized whether the message coerces immediate action ("Account suspended in 2 hours!") to stop you from thinking clearly.</p>
+              </div>
+            </label>
+
+            <label class="check-item" for="chk5">
+              <input type="checkbox" id="chk5" class="checklist-checkbox">
+              <div class="check-content">
+                <strong>5. Protected Confidential Passwords and OTP / 2FA Codes</strong>
+                <p>Confirmed that no password, PIN, or one-time SMS 2FA code is being transmitted in response to an unsolicited prompt.</p>
+              </div>
+            </label>
+
+            <label class="check-item" for="chk6">
+              <input type="checkbox" id="chk6" class="checklist-checkbox">
+              <div class="check-content">
+                <strong>6. Navigated Independently via Official Bookmark or App</strong>
+                <p>If account action is genuinely required, opened a clean browser tab and logged in through the official saved portal rather than the provided link.</p>
+              </div>
+            </label>
+          </div>
+
+          <div class="checklist-verdict-banner" id="checklistVerdictBanner">
+            <div class="verdict-icon-box">🛡️</div>
+            <div>
+              <h4 id="chkVerdictHeader">Safety Check in Progress</h4>
+              <p id="chkVerdictDetail">Select each verified item above to confirm you are safe to proceed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: QUICK CYBERSECURITY GLOSSARY / SEARCH -->
+    <section class="content-section bg-alt" id="glossary">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Cyber Threat Dictionary</span>
+          <h2 class="section-title">Cybersecurity Terms & Concepts</h2>
+          <p class="section-subtitle">
+            Quick reference guide to common industry terminology used in phishing defense and threat intelligence.
+          </p>
+        </div>
+
+        <div class="glossary-search-wrap">
+          <div class="glossary-search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-svg"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="glossarySearchInput" class="glossary-input" placeholder="Search security terms (e.g., Typosquatting, MFA, Smishing, DMARC...)" aria-label="Search glossary terms">
+          </div>
+        </div>
+
+        <div class="glossary-grid" id="glossaryGrid">
+          <div class="glossary-card" data-term="smishing sms text">
+            <h4>Smishing</h4>
+            <p>Phishing conducted via Short Message Service (SMS) text messages, typically using fake tracking numbers or bank security alerts.</p>
+          </div>
+
+          <div class="glossary-card" data-term="vishing voice call audio">
+            <h4>Vishing</h4>
+            <p>Voice phishing executed via telephone calls, often utilizing spoofed caller IDs and high-pressure scripts or AI voice synthesizers.</p>
+          </div>
+
+          <div class="glossary-card" data-term="spear phishing targeted research">
+            <h4>Spear Phishing</h4>
+            <p>A highly customized phishing attack targeting a specific individual, team, or executive, using researched personal background details.</p>
+          </div>
+
+          <div class="glossary-card" data-term="typosquatting domain lookalike">
+            <h4>Typosquatting</h4>
+            <p>Registering intentionally misspelled domain names (e.g., <code>exampel.com</code>) to deceive users who make common typing mistakes.</p>
+          </div>
+
+          <div class="glossary-card" data-term="mfa multi factor authentication 2fa">
+            <h4>Multi-Factor Authentication (MFA)</h4>
+            <p>A security method requiring two or more distinct credentials to authenticate (e.g., password + biometric or hardware token).</p>
+          </div>
+
+          <div class="glossary-card" data-term="dmarc email verification spoofing spf dkim">
+            <h4>DMARC / SPF / DKIM</h4>
+            <p>Standardized email authentication protocols organizations configure on their DNS records to prevent unauthorized senders from spoofing their domain.</p>
+          </div>
+
+          <div class="glossary-card" data-term="malvertising search ads malicious">
+            <h4>Malvertising</h4>
+            <p>Injecting fraudulent or malicious links into legitimate advertising networks and search engine sponsored result slots.</p>
+          </div>
+
+          <div class="glossary-card" data-term="punycode homograph attack idn">
+            <h4>Homograph / Punycode Attack</h4>
+            <p>Using foreign language unicode characters (such as Cyrillic 'а') that look identical to Latin characters to mimic legitimate domain names.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <div class="logo-icon-wrap">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <span class="logo-title">Phish<span class="highlight-purple">Guard</span></span>
+        </div>
+        <p class="footer-mission">
+          Empowering internet users worldwide with the defensive reflexes to recognize deception, thwart social engineering, and maintain online safety.
+        </p>
+        <div class="footer-defense-motto">
+          🛡️ Defensive Awareness is Everyone's Responsibility.
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Core Curriculum</h5>
+        <ul class="footer-links">
+          <li><a href="#learn">Phishing Mechanics</a></li>
+          <li><a href="#fake-sites">Fake Website Detection</a></li>
+          <li><a href="#social-eng">Social Engineering Tactics</a></li>
+          <li><a href="#examples">Simulated Inbox Scenarios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Tools & Resources</h5>
+        <ul class="footer-links">
+          <li><a href="#urlInspectorTool">URL Anatomy Inspector</a></li>
+          <li><a href="#quiz">10-Question Defense Quiz</a></li>
+          <li><a href="#checklist">Pre-Click Safety Checklist</a></li>
+          <li><a href="#glossary">Cyber Threat Dictionary</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Incident Response</h5>
+        <div class="footer-emergency-card">
+          <h6>Report Phishing</h6>
+          <p>Report fraudulent emails to the Anti-Phishing Working Group (APWG) at <code>reportphishing@apwg.org</code> or US-CERT at <code>phishing-report@us-cert.gov</code>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>© 2026 PhishGuard Cybersecurity Awareness. For defensive educational training purposes only.</p>
+        <p class="footer-disclaimer">Fictional examples utilized. No genuine credentials collected.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link script.js -->
+  <script src="script.js"></script>
+</body>
+</html>

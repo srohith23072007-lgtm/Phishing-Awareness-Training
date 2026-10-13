@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="badgeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="badgePurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Starburst/Ribbon Ring -->
+  <circle cx="100" cy="100" r="92" fill="#1e1b4b" stroke="url(#badgeGold)" stroke-width="6"/>
+  <circle cx="100" cy="100" r="78" fill="url(#badgePurple)" stroke="#a5b4fc" stroke-width="2" stroke-dasharray="3 3"/>
+  
+  <!-- Shield Inside -->
+  <path d="M100 48 L142 68 V105 C142 135 100 156 100 156 C100 156 58 135 58 105 V68 Z" fill="#0f172a" stroke="url(#badgeGold)" stroke-width="3"/>
+  <path d="M85 102 L96 113 L118 88" fill="none" stroke="#34d399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Stars -->
+  <polygon points="100,24 103,32 111,32 105,37 107,45 100,40 93,45 95,37 89,32 97,32" fill="#fbbf24"/>
+</svg>
